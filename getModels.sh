@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 set -euxo pipefail
+
 path_to_cfg="https://raw.githubusercontent.com/opencv/opencv_extra/master/testdata/dnn/openpose_pose_coco.prototxt"
-path_to_weights="http://posefs1.perception.cs.cmu.edu/OpenPose/models/pose/coco/pose_iter_440000.caffemodel"
+
+#path_to_weights="http://posefs1.perception.cs.cmu.edu/OpenPose/models/pose/coco/pose_iter_440000.caffemodel"
+path_to_weights="https://github.com/foss-for-synopsys-dwc-arc-processors/synopsys-caffe-models/raw/master/caffe_models/openpose/caffe_model/pose_iter_440000.caffemodel"
+
 if wget ${path_to_weights}; then
 	echo "downloading caffemodel"
 else

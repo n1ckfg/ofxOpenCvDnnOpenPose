@@ -97,7 +97,7 @@ void ofxOpenCvDnnOpenPose::update(ofPixels &op)
     else
     {
         cerr << "there should be 19 parts for the COCO model, 16 for MPI, or 22 for the hand one, but this model has " << nparts << " parts." << endl;
-        return (0);
+        //return (0);
     }
     // find the position of the body parts
     vector<cv::Point> points(22);
